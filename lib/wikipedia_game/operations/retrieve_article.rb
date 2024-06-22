@@ -23,6 +23,7 @@ module WikipediaGame
         Article.new(
           url:,
           title: body['title'],
+          content: ExtractArticleContentHtml.perform(body['html'])
         )
       end
     end
